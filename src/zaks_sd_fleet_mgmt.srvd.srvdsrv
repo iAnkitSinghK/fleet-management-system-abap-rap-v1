@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition -- Fleet MGMT -- Projection Views'
+define service ZAKS_SD_FLEET_MGMT {
+  expose ZAKS_P_ROOT_VEHICLE    as Fleet;
+  expose ZAKS_P_CDS_TRIP        as Trip;
+  expose ZAKS_P_CDS_MAINTENANCE as Maintenance;
+}
