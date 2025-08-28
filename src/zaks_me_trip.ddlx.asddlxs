@@ -1,0 +1,56 @@
+@Metadata.layer: #CORE
+@UI: {
+        headerInfo : { typeName: 'Trip',
+        typeNamePlural: 'Trips',
+        title: { type: #STANDARD, label: 'Trip', value: 'TripId' } },
+        presentationVariant: [{ sortOrder: [{ by: 'TripId', direction: #DESC }] }]}
+annotate view ZAKS_P_CDS_TRIP
+    with 
+{
+    @UI.facet: [{ id: 'Trip',
+                purpose: #STANDARD, 
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'Trip',
+                position: 10 }]
+                
+    @UI.hidden: true
+    TripUUID;
+    @UI:{ lineItem: [{ position: 10, label: 'Trip ID' }],
+        identification: [{ position: 10, label: 'Trip ID' }],
+        selectionField: [{ position: 10 }] }
+    TripId;
+    @UI.hidden: true
+    VehicleId;
+    @UI.hidden: true
+    VehicleUUID;
+    @UI:{ lineItem: [{ position: 20, label: 'Driver ID' }],
+        identification: [{ position: 20, label: 'Driver ID' }]}
+    DriverId;
+    @UI:{ lineItem: [{ position: 30, label: 'Origin' }],
+        identification: [{ position: 30, label: 'Origin' }]}
+    Origin;
+    @UI:{ lineItem: [{ position: 40, label: 'Destination' }],
+        identification: [{ position: 40, label: 'Destination' }]}
+    Destination;
+    @UI:{ identification: [{ position: 50, label: 'Journey Start Date' }]}
+    StartDate;
+    @UI:{ identification: [{ position: 60, label: 'Journey End Date' }]}
+    EndDate;
+    @UI:{ lineItem: [{ position: 50, label: 'Distance in KM' }],
+        identification: [{ position: 70, label: 'Distance in KM' }]}
+    DistanceKm;
+    @UI:{ lineItem: [{ position: 60, label: 'Trip Cost' }],
+        identification: [{ position: 80, label: 'Trip Cost' }]}
+    total_trip_cost;
+    @UI:{ lineItem: [{ position: 70, label: 'Currency' }],
+        identification: [{ position: 90, label: 'Currency' }]}
+    Currency;
+    @UI:{ lineItem: [{ position: 80, label: 'Crago Type' }],
+        identification: [{ position: 100, label: 'Crago Type' }]}
+    CargoType;
+    @UI:{ identification: [{ position: 110, label: 'Created By' }]}
+    CreatedBy;
+    @UI:{ identification: [{ position: 120, label: 'Created On' }]}
+    CreatedOn;
+    
+}

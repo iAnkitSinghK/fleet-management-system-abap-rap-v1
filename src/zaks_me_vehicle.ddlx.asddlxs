@@ -1,0 +1,75 @@
+@Metadata.layer: #CORE
+@UI: {
+        headerInfo : { typeName: 'Vehicle',
+        typeNamePlural: 'Vehicles',
+        title: { type: #STANDARD, label: 'Vehicle', value: 'VehicleId' } },
+        presentationVariant: [{ sortOrder: [{ by: 'VehicleId', direction: #DESC }] }]}
+annotate view ZAKS_P_ROOT_VEHICLE with
+{
+  @UI.facet: [{ id: 'Vehicle',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'Vehicle',
+                position: 10 },
+                
+               { id: 'Trip',
+               purpose: #STANDARD,
+               type: #LINEITEM_REFERENCE,
+               label: 'Trip',
+               position: 20,
+               targetElement: '_Trip' },
+               
+              { id: 'Maintenance',
+                purpose: #STANDARD,
+                type: #LINEITEM_REFERENCE,
+                label: 'Maintenance',
+                position: 30,
+                targetElement: '_Maintenance' }]
+  
+  @UI.hidden: true
+  VehicleUUID;
+  @UI:{ lineItem: [{ position: 10, label: 'Vehicle ID' }],
+        identification: [{ position: 10, label: 'Vehicle ID' }],
+        selectionField: [{ position: 10 }] }
+  VehicleId;
+  @UI:{ lineItem: [{ position: 20, label: 'Registration No' }],
+        identification: [{ position: 20, label: 'Registration No' }],
+        selectionField: [{ position: 20 }] }
+  RegdNo;
+  @UI:{ lineItem: [{ position: 30, label: 'Vehicle Type' }],
+        identification: [{ position: 30, label: 'Vehicle Type' }],
+        selectionField: [{ position: 30 }] }
+  VehicleType;
+  @UI:{ lineItem: [{ position: 40, label: 'Brand' }],
+        identification: [{ position: 40, label: 'Brand' }]}
+  Brand;
+  @UI:{ lineItem: [{ position: 50, label: 'Model' }],
+        identification: [{ position: 50, label: 'Model' }]}
+  Model;
+  @UI:{ identification: [{ position: 60, label: 'Date of Purchase' }]}
+  PurchaseDate;
+  @UI:{ lineItem: [{ position: 60, label: 'Price' }],
+        identification: [{ position: 70, label: 'Price' }]}
+  CostPrice;
+  @UI:{ lineItem: [{ position: 70, label: 'Currency' }],
+        identification: [{ position: 80, label: 'Currency' }]}
+  Currency;
+  @UI:{ identification: [{ position: 90, label: 'Fuel Type' }]}
+  FuelType;
+  @UI:{ lineItem: [{ position: 80, label: 'Capacity' }],
+        identification: [{ position: 100, label: 'Capacity' }]}
+  Capacity;
+  @UI:{ lineItem: [{ position: 90, label: 'Unit' }],
+        identification: [{ position: 110, label: 'Unit' }]}
+  CapacityUnit;
+  @UI:{ identification: [{ position: 120, label: 'Status' }]}
+  Status;
+  @UI:{ lineItem: [{ position: 100, label: 'Plant ID' }],
+        identification: [{ position: 130, label: 'Plant ID' }]}
+  Plant;
+  @UI:{ identification: [{ position: 140, label: 'Created By' }]}
+  CreatedBy;
+  @UI:{ identification: [{ position: 150, label: 'Create On' }]}
+  CreatedOn;
+
+}

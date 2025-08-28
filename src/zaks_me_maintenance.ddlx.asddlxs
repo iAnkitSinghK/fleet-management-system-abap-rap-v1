@@ -1,0 +1,64 @@
+@Metadata.layer: #CORE
+@UI: {
+        headerInfo : { typeName: 'Maintenance',
+        typeNamePlural: 'Maintenance',
+        title: { type: #STANDARD, label: 'Maintenance', value: 'MaintId' } },
+        presentationVariant: [{ sortOrder: [{ by: 'MaintId', direction: #DESC }] }]}
+annotate view ZAKS_P_CDS_MAINTENANCE
+    with 
+{
+    @UI.facet: [{ id: 'Maintenance',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'Maintenance',
+                position: 10 }]
+    
+    @UI.hidden: true
+    MaintUUID;
+    @UI:{ lineItem: [{ position: 10, label: 'Maintenance ID' }],
+        identification: [{ position: 10, label: 'Maintenance ID' }],
+        selectionField: [{ position: 10 }] }
+    MaintId;
+    @UI.hidden: true
+    VehicleId;
+    @UI.hidden: true
+    VehicleUUID;
+    @UI:{ lineItem: [{ position: 20, label: 'Service Date' }],
+        identification: [{ position: 20, label: 'Service Date' }]}
+    ServiceDate;
+    @UI:{ lineItem: [{ position: 30, label: 'Service Type' }],
+        identification: [{ position: 30, label: 'Service Type' }]}
+    ServiceType;
+    @UI:{ lineItem: [{ position: 40, label: 'Workshop Name' }],
+        identification: [{ position: 40, label: 'Workshop Name' }]}
+    WorkshopName;
+    @UI:{ lineItem: [{ position: 50, label: 'Servicing Cost' }],
+        identification: [{ position: 50, label: 'Servicing Cost' }]}
+    ServiceCost; 
+    @UI:{ lineItem: [{ position: 60, label: 'Currency' }],
+        identification: [{ position: 60, label: 'Currency' }]}
+    Currency;
+    @UI:{ lineItem: [{ position: 70, label: 'Odometer Reading in KM' }],
+        identification: [{ position: 70, label: 'Odometer Reading in KM' }]}
+    OdometerReading;
+    @UI:{ lineItem: [{ position: 80, label: 'Parts Changed/Repaired' }],
+        identification: [{ position: 80, label: 'Parts Changed/Repaired' }]}
+    PartsChanged;
+    @UI:{ lineItem: [{ position: 90, label: 'Warranty Claimed' }],
+        identification: [{ position: 90, label: 'Warranty Claimed' }]}
+    WarrantyClaim;
+    @UI:{ lineItem: [{ position: 100, label: 'Next Servicing Date' }],
+        identification: [{ position: 100, label: 'Next Servicing Date' }]}
+    NextServiceDate;
+    @UI:{ lineItem: [{ position: 110, label: 'Material Number' }],
+        identification: [{ position: 110, label: 'Material Number' }]}
+    MaterialNumber;
+    @UI:{ lineItem: [{ position: 120, label: 'Vendor ID' }],
+        identification: [{ position: 120, label: 'Vendor ID' }]}
+    VendorNumber;
+    @UI:{ identification: [{ position: 130, label: 'Created By' }]}
+    CreatedBy;
+    @UI:{ identification: [{ position: 140, label: 'Created On' }]}
+    CreatedOn;
+    
+}
