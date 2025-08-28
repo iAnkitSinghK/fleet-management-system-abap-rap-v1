@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000010</LENG>
+    <OUTPUTLEN>000010</OUTPUTLEN>
+    <VALEXI>X</VALEXI>
+    <DDTEXT>Service Type</DDTEXT>
+    <DOMMASTER>E</DOMMASTER>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>OIL</DOMVALUE_L>
+     <DDTEXT>Oil Change</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>TYRE</DOMVALUE_L>
+     <DDTEXT>Tyre Replacement</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>ENG</DOMVALUE_L>
+     <DDTEXT>Engine Repair</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>TRANS</DOMVALUE_L>
+     <DDTEXT>Transmission Repair</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0005</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>BRAKE</DOMVALUE_L>
+     <DDTEXT>Brake Repair</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0006</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>AC</DOMVALUE_L>
+     <DDTEXT>Air Conditioning Repair</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0007</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>BAT</DOMVALUE_L>
+     <DDTEXT>Battery Replacement</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0008</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>PAINT</DOMVALUE_L>
+     <DDTEXT>Painting / Body Work</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0009</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>GEN</DOMVALUE_L>
+     <DDTEXT>General Repair</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0010</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>ELEC</DOMVALUE_L>
+     <DDTEXT>Electrical Repair</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0011</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>SUSP</DOMVALUE_L>
+     <DDTEXT>Suspension Repair</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAKS_DO_FM_STYP</DOMNAME>
+     <VALPOS>0012</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>OTHER</DOMVALUE_L>
+     <DDTEXT>Other Maintenance</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
