@@ -14,6 +14,7 @@ define view entity ZAKS_CMP_CDS_TRIP
 {
   key trip_uuid                    as TripUUID,
   key trip_id                      as TripId,
+      vehicle_uuid                 as VehicleUUID,
       vehicle_id                   as VehicleId,
       driver_id                    as DriverId,
       origin                       as Origin,
