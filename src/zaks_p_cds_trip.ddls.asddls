@@ -1,6 +1,7 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Projection View -- CDS Interface (Trip)'
 @Metadata.ignorePropagatedAnnotations: true
+@Metadata.allowExtensions: true
 define view entity ZAKS_P_CDS_TRIP as projection on ZAKS_I_CDS_TRIP
 {
     key TripUUID,
