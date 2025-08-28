@@ -1,0 +1,95 @@
+managed; //implementation in class zbp_aks_i_root_vehicle unique;
+//strict ( 2 );
+
+define behavior for ZAKS_I_ROOT_VEHICLE //alias <alias_name>
+persistent table zaks_vehicle
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) VehicleId;
+  field ( readonly, numbering : managed ) VehicleUUID;
+  association _Maintenance { create; }
+  association _Trip { create; }
+
+  mapping for zaks_vehicle{
+    VehicleUUID = vehicle_uuid;
+    VehicleId = vehicle_id;
+    RegdNo = regd_no;
+    VehicleType = vehicle_type;
+    Brand = brand;
+    Model = model;
+    FuelType = fuel_type;
+    CostPrice = cost_price;
+    Capacity = capacity;
+    CapacityUnit = capacity_unit;
+    Plant = plant;
+    PurchaseDate = purchase_date;
+    Status = status;
+    CreatedBy = created_by;
+    CreatedOn = created_on;
+    Currency = currency;
+    }
+}
+
+define behavior for ZAKS_I_CDS_MAINTENANCE //alias <alias_name>
+persistent table zaks_maintenance
+lock dependent by _Vehicle
+//authorization dependent by _Vehicle
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) VehicleId,VehicleUUID, MaintId;
+  association _Vehicle;
+
+  mapping for zaks_maintenance{
+    MaintId = maint_id;
+    VehicleUUID = vehicle_uuid;
+    VehicleId = vehicle_id;
+    ServiceDate = service_date;
+    ServiceType = service_type;
+    WorkshopName = workshop_name;
+    ServiceCost = service_cost;
+    Currency = currency;
+    OdometerReading = odometer_reading;
+    PartsChanged = parts_changed;
+    WarrantyClaim = warranty_claim;
+    NextServiceDate = next_service_date;
+    MaterialNumber = material_number;
+    VendorNumber = vendor_number;
+    CreatedBy = created_by;
+    CreatedOn = created_on;
+    }
+}
+
+define behavior for ZAKS_I_CDS_TRIP //alias <alias_name>
+persistent table ZAKS_TRIP
+lock dependent by _Vehicle
+//authorization dependent by _Vehicle
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) VehicleId,VehicleUUID, TripId;
+  association _Vehicle;
+
+  mapping for ZAKS_TRIP{
+    TripId = trip_id;
+    VehicleUUID = vehicle_uuid;
+    VehicleId = vehicle_id;
+    DriverId = driver_id;
+    Origin = origin;
+    Destination = destination;
+    StartDate = start_date;
+    EndDate = end_date;
+    DistanceKm = distance_km;
+    CargoType = cargo_type;
+    CreatedBy = created_by;
+    CreatedOn = created_on;
+    }
+    field (readonly) total_trip_cost;
+}
