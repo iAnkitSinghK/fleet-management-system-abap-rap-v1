@@ -147,46 +147,21 @@ Below are sample screenshots showcasing the Fleet Management System's Fiori UI a
 ```plaintext
 fleet-management-system-rap-version1/
 │── src/
-│ ├── tables/
-│ │ ├── zaks_vehicle # Vehicle master data table
-│ │ ├── zaks_trip # Trip details table
-│ │ └── zaks_maintenance # Maintenance details table
-│ │
-│ ├── classes/
-│ │ └── zaks_fm_fill # Class to fill initial data into tables
-│ │
-│ ├── cds/
-│ │ ├── zaks_cmp_cds_trip # CDS View (trip cost calculation)
-│ │ ├── zaks_i_root_vehicle # Root interface view on vehicle
-│ │ ├── zaks_i_cds_trip # Interface view on trip CDS
-│ │ └── zaks_i_cds_maintenance # Interface view on maintenance
-│ │
-│ ├── behavior/
-│ │ └── zaks_i_root_vehicle # Behavior definition (Managed Scenario)
-│ │
-│ ├── projections/
-│ │ ├── zaks_p_root_vehicle # Projection view on root
-│ │ ├── zaks_p_cds_trip # Projection view on trip
-│ │ └── zaks_p_cds_maintenance # Projection view on maintenance
-│ │
-│ ├── behavior_projections/
-│ │ └── zaks_p_root_vehicle # Behavior projection on root projection
-│ │
-│ ├── ui/
-│ │ ├── zaks_me_vehicle # Metadata extension for vehicle UI
-│ │ ├── zaks_me_trip # Metadata extension for trip UI
-│ │ └── zaks_me_maintenance # Metadata extension for maintenance UI
-│ │
-│ ├── service/
-│ │ ├── zaks_sd_fleet_mgmt # Service definition (Fleet, Trip, Maintenance)
-│ │ └── zaks_sb_fleet_mgmt # Service binding (OData V2)
-│ │
-│ └── assets/ # Screenshots & demo images
-│ 
+│   ├── assets/                # Screenshots & demo images
+│   ├── behavior/              # Behavior definitions (Managed Scenario)
+│   ├── behavior_projections/  # Behavior projections
+│   ├── cds/                   # CDS views (Interface & Computed)
+│   ├── classes/               # ABAP classes (e.g., data initializer)
+│   ├── data_elements/         # Data elements
+│   ├── domains/               # Domains
+│   ├── projections/           # Projection views
+│   ├── service/               # Service definitions & bindings
+│   ├── tables/                # Custom database tables
+│   ├── ui/                    # Metadata extensions for UI annotations
+│   └── package.devc.xml       # ABAP package definition
 │
-│── LICENSE # MIT License
+│── LICENSE                    # MIT License
 └── README.md
-```
 
 ---
 
