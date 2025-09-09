@@ -162,7 +162,7 @@ fleet-management-system-rap-version1/
 │
 │── LICENSE                    # MIT License
 └── README.md
-
+```
 ---
 
 ## ⚡ Planned Enhancements
@@ -170,6 +170,16 @@ fleet-management-system-rap-version1/
 - RAP **Unmanaged Scenario** implementation  
 - Role-based authorization and access control  
 - Advanced KPIs and analytics dashboards
+
+---
+
+---
+
+## 📖 Detailed Documentation
+
+A complete step-by-step documentation of this project is available in the **GitHub Wiki**:  
+👉 [Fleet Management System Wiki](https://github.com/iankitsinghk/fleet-management-system-abap-rap-v1/wiki)
+
 
 ---
 
